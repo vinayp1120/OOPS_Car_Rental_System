@@ -1,0 +1,10 @@
+1,"Nissan",800,true
+2,"Ford",1200,true
+3,"Toyota",900,true
+4,"Volkswagen",700,true
+5,"Honda",400,true
+6,"Kia",1000,true
+7,"BMW",1500,true
+8,"Mazda",600,true
+9,"Subaru",1100,true
+10,"Hyundai",950,true

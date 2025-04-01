@@ -1,0 +1,33 @@
+Objective:To implement OOP's Concept in the Real Time so ,this project going to use all the OOPS 4 Pillars(abstraction,Inheritance,Polymorphism,Encapsulation)
+Problem Statement:Create and simulate a simple Car Rental System using Java OOPS
+
+We will be having different kinds of Class files which store the data in there corresponding objects ,so that using that one object we can able to retrieve information related to the object
+Classes we are going to have here are:
+Car (It stores full details about the car under one object,using one object we can store details of the car ,and call some methods for specific details)
+Customer(It stores full information about the Customer under a single object,it has some methods where we can use them by the help of the object and then call them for some specific details)
+Rental(Full information about the rental like who is the Customer took,what car he took,for what period of time a customer took,all the details are encapsulated under a single object under this class)
+Car Rental system(it is the full system that utilies about classes in it and run the full project)
+
+Members of the class Car:
+CarId,CarModel,BasePrice,isAvailable
+These variables should be given direct access to the users to modify or do changes in it.If u given they can misuse it.Inorder to stop the direct access to the variables we can restrict the control on this elements with 
+help of Encapsulation where all the Members will be private in nature and they can be accessed indirectly through setter and getter.
+This technique ensures data protection, security, and flexibility in Java programming.a protective shield that prevents the data from being accessed by the code outside this shield. 
+
+Members of the class Customer:
+CustomerId,CustomerName,CustomerPhone,CustomerEmail
+
+Members of the class Rent:
+Car car,Customer customer,days
+
+Members of the Car Rental System:
+rentalList,carList,customerList
+process here is:
+1. Create a List object of car
+2. Create a List object of customer
+3. Create a List object of rental
+4. Add all the availabel cars into the list of objects
+5. Add all the available customers into the list of objects
+6. Add all the available rentals into the list of objects
+7. Now we can able to add a new rental by calling the method addRental() in the car rental class which has arguments car id, customer id , days
+we need to find the object of the car,customer which are matching with the input ids,and add them in the rental object.
