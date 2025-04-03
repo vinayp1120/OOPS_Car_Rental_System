@@ -1,33 +1,68 @@
-Objective:To implement OOP's Concept in the Real Time so ,this project going to use all the OOPS 4 Pillars(abstraction,Inheritance,Polymorphism,Encapsulation)
-Problem Statement:Create and simulate a simple Car Rental System using Java OOPS
+# Car Rental System using Java OOPS
 
-We will be having different kinds of Class files which store the data in there corresponding objects ,so that using that one object we can able to retrieve information related to the object
-Classes we are going to have here are:
-Car (It stores full details about the car under one object,using one object we can store details of the car ,and call some methods for specific details)
-Customer(It stores full information about the Customer under a single object,it has some methods where we can use them by the help of the object and then call them for some specific details)
-Rental(Full information about the rental like who is the Customer took,what car he took,for what period of time a customer took,all the details are encapsulated under a single object under this class)
-Car Rental system(it is the full system that utilies about classes in it and run the full project)
+## Objective
+To implement Object-Oriented Programming (OOP) concepts in a real-time application. This project utilizes all four pillars of OOP: **Abstraction, Inheritance, Polymorphism, and Encapsulation**.
 
-Members of the class Car:
-CarId,CarModel,BasePrice,isAvailable
-These variables should be given direct access to the users to modify or do changes in it.If u given they can misuse it.Inorder to stop the direct access to the variables we can restrict the control on this elements with 
-help of Encapsulation where all the Members will be private in nature and they can be accessed indirectly through setter and getter.
-This technique ensures data protection, security, and flexibility in Java programming.a protective shield that prevents the data from being accessed by the code outside this shield. 
+## Problem Statement
+Create and simulate a simple **Car Rental System** using Java OOP principles.
 
-Members of the class Customer:
-CustomerId,CustomerName,CustomerPhone,CustomerEmail
+## Overview
+The system consists of various class files that store data in corresponding objects. Using these objects, we can efficiently retrieve information related to a particular entity.
 
-Members of the class Rent:
-Car car,Customer customer,days
+## Classes in the System
+1. **Car** - Stores complete details about a car, allowing retrieval and modification of specific information through methods.
+2. **Customer** - Stores full information about a customer and provides methods to access relevant details.
+3. **Rental** - Encapsulates all rental-related information, such as the customer renting a car, the rented car details, and the rental period.
+4. **CarRentalSystem** - Acts as the core system that integrates all the classes and manages the rental process.
 
-Members of the Car Rental System:
-rentalList,carList,customerList
-process here is:
-1. Create a List object of car
-2. Create a List object of customer
-3. Create a List object of rental
-4. Add all the availabel cars into the list of objects
-5. Add all the available customers into the list of objects
-6. Add all the available rentals into the list of objects
-7. Now we can able to add a new rental by calling the method addRental() in the car rental class which has arguments car id, customer id , days
-we need to find the object of the car,customer which are matching with the input ids,and add them in the rental object.
+## Class Details
+### **1. Car Class**
+#### Members:
+- `private String carId;`
+- `private String carModel;`
+- `private double basePrice;`
+- `private boolean isAvailable;`
+
+#### Encapsulation:
+To prevent unauthorized access and modification of variables, **Encapsulation** is used. All member variables are declared **private** and can be accessed only through **getter and setter methods**. This approach enhances data protection, security, and flexibility in Java programming.
+
+---
+
+### **2. Customer Class**
+#### Members:
+- `private String customerId;`
+- `private String customerName;`
+- `private String customerPhone;`
+- `private String customerEmail;`
+
+---
+
+### **3. Rental Class**
+#### Members:
+- `private Car car;`
+- `private Customer customer;`
+- `private int days;`
+
+---
+
+### **4. Car Rental System Class**
+#### Members:
+- `private List<Car> carList;`
+- `private List<Customer> customerList;`
+- `private List<Rental> rentalList;`
+
+#### Process Flow:
+1. Create a **List** to store available cars.
+2. Create a **List** to store registered customers.
+3. Create a **List** to store rental records.
+4. Populate the `carList` with available car objects.
+5. Populate the `customerList` with available customer objects.
+6. Populate the `rentalList` with existing rental transactions.
+7. Add a new rental by calling the `addRental(carId, customerId, days)` method in the **CarRentalSystem** class.
+   - Find the matching **Car** and **Customer** objects using their respective IDs.
+   - Create a **Rental** object with the retrieved car, customer, and rental period.
+   - Add the newly created rental object to the `rentalList`.
+
+## Conclusion
+This **Car Rental System** effectively demonstrates the implementation of **Abstraction, Encapsulation, Inheritance, and Polymorphism** in Java. The use of lists to manage cars, customers, and rentals ensures efficient data storage and retrieval. Encapsulation enhances data security, while polymorphism and abstraction provide flexible and scalable system architecture.
+
